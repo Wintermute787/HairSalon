@@ -14,6 +14,7 @@ namespace HairSalon.Models
         {
             _stylistName = name;
             _id = id;
+            _name = new List<Client>{};
         }
 
         public string GetName()
