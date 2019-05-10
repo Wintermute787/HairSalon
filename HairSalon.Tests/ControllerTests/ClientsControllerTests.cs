@@ -4,11 +4,12 @@
 // using HairSalon.Controllers;
 // using HairSalon.Models;
 
-// namespace HairSalon.TestTools
+// namespace HairSalon.Test
 // {
-//     [TestClass]
-//     public class ClientsControllerTest
-//     {
-      
-//     }
+//    [TestClass]
+//    public class ClientTest 
+//    {
+
+
+//    }
 // }

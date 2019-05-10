@@ -32,7 +32,7 @@ namespace HairSalon.Models
             return _id;
         }
 
-        public void Setname(string newName)
+        public void SetName(string newName)
         {
             _name = newName;
         }
@@ -59,6 +59,20 @@ namespace HairSalon.Models
                 conn.Dispose();
             }
             return allItems;
+        }
+
+        public static void ClearAll()
+        {
+            MySqlConnection conn = DB.Connection();
+            conn.Open();
+            var cmd = conn.CreateCommand() as MySqlCommand;
+            cmd.CommandText = @"DELETE FROM clients;";
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            if(conn != null)
+            {
+                conn.Dispose();
+            }
         }
 
         public static Client Find(int id)

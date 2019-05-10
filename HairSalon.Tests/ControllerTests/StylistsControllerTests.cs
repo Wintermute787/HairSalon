@@ -15,9 +15,9 @@ namespace HairSalon.Test
         {
             StylistsController controller = new StylistsController();
 
-            IActionResult view = controller.Create(1, "test");
+            IActionResult view = controller.Create( "test");
 
-            Assert.IsInstanceOfType(view, typeof(RedirectToActionResult));
+            Assert.IsInstanceOfType(view, typeof(ViewResult));
         }
     }
 }

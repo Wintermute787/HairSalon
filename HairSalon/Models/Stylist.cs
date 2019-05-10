@@ -32,6 +32,20 @@ namespace HairSalon.Models
             return this.GetId().GetHashCode();
         }
 
+            public static void ClearAll()
+        {
+            MySqlConnection conn = DB.Connection();
+            conn.Open();
+            var cmd = conn.CreateCommand() as MySqlCommand;
+            cmd.CommandText = @"DELETE FROM stylists;";
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            if(conn != null)
+            {
+                conn.Dispose();
+            }
+        }
+
 
         public override bool Equals(System.Object otherStylist)
         {
