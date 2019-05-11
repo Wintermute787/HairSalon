@@ -1,6 +1,6 @@
 # _Joe Barnes_
 
-#### _Web app for a Hair Salon, 05/10/19 
+#### Web app for a Hair Salon, 05/10/19 
 
 #### By _**Joe Barnes**_
 
