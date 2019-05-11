@@ -1,12 +1,12 @@
 # _Joe Barnes_
 
-#### _Web app for a Hair Salon, 05/10/19 _
+#### _Web app for a Hair Salon, 05/10/19 
 
 #### By _**Joe Barnes**_
 
 ## Description
 
-_A hair salon owner may create Stylists in the database and save clients to them. _
+A hair salon owner may create Stylists in the database and save clients to them. 
 
 ## Setup/Installation Requirements
 
@@ -16,7 +16,7 @@ _A hair salon owner may create Stylists in the database and save clients to them
 * _navigate to localhost:5000 to view_
 
 
-_Launch mysql in console. 
+Launch mysql in console. 
 CREATE DATABASE()
 CREATE DATABASE hairSalon
 SHOW DATABASE
@@ -25,7 +25,6 @@ SELECT DATABASE();
 CREATE TABLE stylists ( id serial PRIMARY KEY, name VARCHAR (255))
 CREATE TABLE clients (id serial PRIMARY KEY, name VARCHAR (255) stylistId INT)
 DROP DATABASE hairSalon
-_
 
 ## Known Bugs
 
@@ -37,7 +36,7 @@ _If there any any bugs contact me at joebaranes333@gmail.com_
 
 ## Technologies Used
 
-_C#, HTML, MYSQL, _
+C#, HTML, MYSQL
 
 ### License
 
