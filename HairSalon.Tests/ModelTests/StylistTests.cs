@@ -100,6 +100,7 @@ namespace HairSalon.Tests
             //Assert
             CollectionAssert.AreEqual(testClientList, resultClientList);
         }
+        //will add more tests
 
     }
 }
