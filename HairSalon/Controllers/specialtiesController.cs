@@ -73,6 +73,16 @@ namespace HairSalon.Controllers
             model.Add("specialty", specialty);
             return View("Show", model);
         }
+
+        [HttpPost("/specialties/{specialtyId}/delete")]
+        public ActionResult Delete(int specialtyId)
+        {
+            Specialty specialty = Specialty.Find(specialtyId);
+            specialty.Delete();
+            Dictionary<string, object> model = new Dictionary<string,object>();
+            model.Add("specialty",specialty);
+            return View(model);
+        }
         
     }
 }
