@@ -3,10 +3,10 @@
 
 <h2>Edit Specialty: @Model["specialty"].GetDescription()</h2>
 
-<form action="/specialties/@Model['specialty'].GetId()" method="post">
+<form action="/specialties/@Model["specialty"].GetId()" method="post">
     <label for="description">Description:</label>
-    <input type="text" name="description" value="@Model['specialty'].GetDescription()">
+    <input type="text" name="description" value="@Model["specialty"].GetDescription()">
     <button type="submit">Edit</button>
 </form>
 
-<h4><a href="/specialties/@Model['/specialty'].GetId()">Return to previous page</a></h4>
+<h4><a href="/specialties/@Model["specialty"].GetId()">Return to previous page</a></h4>

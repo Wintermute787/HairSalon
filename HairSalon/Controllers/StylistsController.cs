@@ -34,9 +34,11 @@ namespace HairSalon.Controllers
         {
             Dictionary<string, object> model = new Dictionary<string, object>();
             Stylist selectedStylist = Stylist.Find(id);
+            List<Specialty> specialtyDescription = Specialty.GetAll();
             List<Client> clientNames = selectedStylist.GetClients();
             model.Add("stylists", selectedStylist);
             model.Add("clients", clientNames);
+            model.Add("specialtyDescription", specialtyDescription);
             return View(model);
         }
 
@@ -49,8 +51,10 @@ namespace HairSalon.Controllers
             newClient.Save();
             foundStylist.AddClient(newClient);
             List<Client> clientNames = foundStylist.GetClients();
+            List<Specialty> specialtyDescription = Specialty.GetAll();
             model.Add("clients", clientNames);
             model.Add("stylists", foundStylist);
+            model.Add("specialtyDescription", specialtyDescription);
             return View("Show", model);
         }
     }
