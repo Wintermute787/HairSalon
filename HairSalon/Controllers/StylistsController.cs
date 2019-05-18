@@ -58,6 +58,8 @@ namespace HairSalon.Controllers
             return View("Show", model);
         }
 
+  
+
         [HttpPost("/stylists/{stylistId}/delete")]
         public ActionResult Delete(int stylisId)
         {
