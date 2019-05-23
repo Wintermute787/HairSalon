@@ -29,16 +29,21 @@ namespace HairSalon.Controllers
             return View("Index", allStylists);
         }
 
+
+
+
         [HttpGet("/stylists/{id}")]
         public ActionResult Show(int id)
         {
             Dictionary<string, object> model = new Dictionary<string, object>();
             Stylist selectedStylist = Stylist.Find(id);
-            List<Specialty> specialtyDescription = Specialty.GetAll();
+            List<Specialty> specialtyDescription = selectedStylist.GetSpecialties();
+            List<Specialty> specialty = Specialty.GetAll();
             List<Client> clientNames = selectedStylist.GetClients();
             model.Add("stylists", selectedStylist);
             model.Add("clients", clientNames);
             model.Add("specialtyDescription", specialtyDescription);
+            model.Add("specialty", specialty);
             return View(model);
         }
 
@@ -61,9 +66,9 @@ namespace HairSalon.Controllers
   
 
         [HttpPost("/stylists/{stylistId}/delete")]
-        public ActionResult Delete(int stylisId)
+        public ActionResult Delete(int stylistId)
         {
-            Stylist stylist = Stylist.Find(stylisId);
+            Stylist stylist = Stylist.Find(stylistId);
             stylist.Delete();
             Dictionary<string, object> model = new Dictionary<string, object>();
             model.Add("stylists", stylist);
